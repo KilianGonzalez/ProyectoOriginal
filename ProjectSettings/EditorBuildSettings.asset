@@ -8,4 +8,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/menu.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/partida.unity
+    guid: 9af823292af4e374bb713607d2683ad4
+  - enabled: 1
+    path: Assets/Scenes/gameover.unity
+    guid: a845a4e265ac44649a15a81fc9dca714
+  - enabled: 1
+    path: Assets/Scenes/historia.unity
+    guid: 876890392e888db4aac79961951632e8
+  - enabled: 1
+    path: Assets/Scenes/tutorial.unity
+    guid: 63f8c79695fc4974e99689f663d330cd
+  - enabled: 1
+    path: Assets/Scenes/victory.unity
+    guid: e6278d52b54e6a64d8b05553329153c9
   m_configObjects: {}
