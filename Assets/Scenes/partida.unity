@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carToGenerate: {fileID: 4058059796700476383, guid: bde2e6d52db66d142a2a69d866cda8cc, type: 3}
-  initialTimeToSpawn: 4
+  initialTimeToSpawn: 10
   repeatTimeToSpawn: 15
 --- !u!4 &1799968048
 Transform:
@@ -965,8 +965,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   carToGenerate: {fileID: 4058059796700476383, guid: bde2e6d52db66d142a2a69d866cda8cc, type: 3}
-  initialTimeToSpawn: 3
-  repeatTimeToSpawn: 6
+  initialTimeToSpawn: 5
+  repeatTimeToSpawn: 12
 --- !u!4 &2052070451
 Transform:
   m_ObjectHideFlags: 0
