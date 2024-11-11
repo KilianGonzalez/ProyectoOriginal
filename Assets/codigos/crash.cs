@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Crash : MonoBehaviour
 {
-    private int vidas = 3;
+    public int vidas = 3;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
