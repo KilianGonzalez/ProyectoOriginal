@@ -3,7 +3,12 @@ guid: 22f90a699836c97408a7b2e3bc723041
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - questionPanel: {instanceID: 0}
+  - questionText: {instanceID: 0}
+  - answerInput: {instanceID: 0}
+  - crashScript: {instanceID: 0}
+  - carController: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
