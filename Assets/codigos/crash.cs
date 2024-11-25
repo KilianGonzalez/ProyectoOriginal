@@ -1,8 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using UnityEngine;
 
 public class Crash : MonoBehaviour
 {
@@ -13,6 +10,7 @@ public class Crash : MonoBehaviour
     private void Start()
     {
         vidas = 3;
+        uiVidasJugador.text = vidas.ToString() + " x"; // Inicia el UI con las vidas
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -20,8 +18,6 @@ public class Crash : MonoBehaviour
         if (collision.CompareTag("enemy"))
         {
             vidas--;
-             
-            
             if (vidas <= 0)
             {
                 Destroy(gameObject);
@@ -33,6 +29,18 @@ public class Crash : MonoBehaviour
             }
         }
     }
+
+    // Método para restar una vida desde otro script
+    public void DecreaseLife()
+    {
+        vidas--;
+        uiVidasJugador.text = vidas.ToString() + " x"; // Actualiza el UI
+
+        // Verifica si el jugador ha perdido todas las vidas
+        if (vidas <= 0)
+        {
+            Destroy(gameObject);
+            SceneManager.LoadScene("gameover");
+        }
+    }
 }
-
-
