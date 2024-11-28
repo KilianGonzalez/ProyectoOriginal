@@ -357,6 +357,7 @@ MonoBehaviour:
   answerInput: {fileID: 930405265}
   crashScript: {fileID: 1414326481}
   carController: {fileID: 2658734122325123252, guid: bde2e6d52db66d142a2a69d866cda8cc, type: 3}
+  scoreManager: {fileID: 0}
   speedIncreaseAmount: 1
 --- !u!4 &156751645
 Transform:
@@ -1121,7 +1122,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 76a80348fbe20434faeae9bb9a5bb80a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingTime: 300
+  startingTime: 180
   countdownText: {fileID: 1121231572}
   victorySceneName: victory
 --- !u!114 &1121231572

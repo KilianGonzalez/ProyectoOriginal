@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class CountdownTimer : MonoBehaviour
 {
-    public int startingTime = 300; // Tiempo inicial en segundos
+    public int startingTime = 180; // Tiempo inicial en segundos
     public TMP_Text countdownText; // Referencia al TMP_Text donde se mostrará el contador
     public string victorySceneName = "victory"; // Nombre de la escena de victoria
 

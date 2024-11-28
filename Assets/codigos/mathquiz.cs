@@ -9,14 +9,15 @@ public class MathQuiz : MonoBehaviour
     public GameObject questionPanel;
     public TMP_Text questionText;
     public TMP_InputField answerInput;
-    public Crash crashScript;  // Referencia al script Crash que maneja las vidas
-    public RegularCar carController;  // Referencia al script que maneja el coche
+    public Crash crashScript; // Referencia al script Crash que maneja las vidas
+    public RegularCar carController; // Referencia al script que maneja el coche
+    public ScoreManager scoreManager; // Referencia al script ScoreManager
 
     private List<(string, int)> questions;
     private bool isQuestionActive;
     private int correctAnswer; // Variable para almacenar la respuesta correcta actual
 
-    public float speedIncreaseAmount = 1f;  // Cantidad con la que se incrementa la velocidad del coche
+    public float speedIncreaseAmount = 1f; // Cantidad con la que se incrementa la velocidad del coche
 
     void Start()
     {
@@ -51,7 +52,8 @@ public class MathQuiz : MonoBehaviour
             ("4 * 6", 24), ("24 / 4", 6), ("20 + 5", 25), ("10 - 5", 5),
             ("9 * 3", 27), ("27 / 9", 3), ("15 + 13", 28), ("25 - 12", 13),
             ("7 * 2", 14), ("30 / 6", 5), ("8 + 7", 15), ("21 - 7", 14),
-            ("6 * 6", 36), ("36 / 6", 6), ("10 + 10", 20), ("20 - 3", 17)
+            ("6 * 6", 36), ("36 / 6", 6), ("10 + 10", 20), ("20 - 3", 17),
+            ("0 * 1", 0), ("69 / 3", 23), ("144 / 2", 72), ("60 * 3", 180)
         };
 
         // Llamamos a la corutina que plantea la pregunta
@@ -93,6 +95,8 @@ public class MathQuiz : MonoBehaviour
                 {
                     Debug.Log("Respuesta correcta.");
                     carController.IncreaseSpeed(speedIncreaseAmount);
+
+                    DatosGlobales.puntos += 1000;
                 }
                 else
                 {
@@ -113,7 +117,7 @@ public class MathQuiz : MonoBehaviour
     private IEnumerator TrackGameTime()
     {
         // Esperar un minuto (60 segundos)
-        yield return new WaitForSeconds(300f);
+        yield return new WaitForSeconds(180f);
 
         // Cargar la escena de victoria
         Debug.Log("¡Se ha alcanzado 1 minuto de juego! Cargando la escena de victoria...");
