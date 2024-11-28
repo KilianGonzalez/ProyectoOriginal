@@ -1395,9 +1395,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "El cotxe t\xE9 una velocitat en comen\xE7ar a jugar, quan encertis la
-    pregunta el cotxe anir\xE0 m\xE9s r\xE0pid. Tindr\xE0s tres vides en comen\xE7ar,
-    si falles una pregunta perdr\xE0s un cor i aix\xED fins perdre tots"
+  m_text: "El cotxe tindr\xE0 3 vides. Cada vegada que t'equivoquis en una pregunta,
+    perdr\xE0s 1 vida, i si xoques amb un altre cotxe, tamb\xE9 perdr\xE0s una vida.
+    El moviment es controlar\xE0 amb les tecles A i D."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

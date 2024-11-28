@@ -116,11 +116,22 @@ public class MathQuiz : MonoBehaviour
 
     private IEnumerator TrackGameTime()
     {
-        // Esperar un minuto (60 segundos)
-        yield return new WaitForSeconds(180f);
 
-        // Cargar la escena de victoria
-        Debug.Log("¡Se ha alcanzado 1 minuto de juego! Cargando la escena de victoria...");
-        SceneManager.LoadScene("victory");
+        if (DatosGlobales.puntos != 0)
+        {
+            // Esperar un minuto (60 segundos)
+            yield return new WaitForSeconds(180f);
+
+            // Cargar la escena de victoria
+            Debug.Log("¡Se ha alcanzado 1 minuto de juego! Cargando la escena de victoria...");
+            SceneManager.LoadScene("victory");
+        } 
+        else
+        {
+            yield return new WaitForSeconds(180f);
+            SceneManager.LoadScene("gameover");
+        }
+        
+        
     }
 }
