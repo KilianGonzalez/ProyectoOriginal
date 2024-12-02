@@ -107,10 +107,9 @@ public class MathQuiz : MonoBehaviour
                 // Generar nueva pregunta
                 GenerateNewQuestion();
             }
-            else
-            {
-                Debug.Log("Entrada inválida.");
-            }
+          
+            
+            
         }
     }
 
