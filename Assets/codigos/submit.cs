@@ -18,7 +18,7 @@ public class SubmitOnEnter : MonoBehaviour
 
     void Update()
     {
-        // Detectar la tecla Enter para activar el botón
+        // Detectar la tecla Enter para activar el botón de confirmar
         if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter))
         {
             submitButton.onClick.Invoke();
