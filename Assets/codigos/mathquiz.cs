@@ -9,6 +9,7 @@ public class MathQuiz : MonoBehaviour
     public GameObject questionPanel;
     public TMP_Text questionText;
     public TMP_InputField answerInput;
+    public TMP_Text scoreText; // Referencia al TextMeshPro que muestra los puntos
     public Crash crashScript; // Referencia al script Crash que maneja las vidas
     public RegularCar carController; // Referencia al script que maneja el coche
     public ScoreManager scoreManager; // Referencia al script ScoreManager
@@ -61,6 +62,9 @@ public class MathQuiz : MonoBehaviour
 
         // Generar la primera pregunta
         GenerateNewQuestion();
+
+        // Actualizar el texto del marcador al inicio
+        UpdateScoreText();
     }
 
     private void GenerateNewQuestion()
@@ -97,6 +101,9 @@ public class MathQuiz : MonoBehaviour
                     carController.IncreaseSpeed(speedIncreaseAmount);
 
                     DatosGlobales.puntos += 1000;
+
+                    // Actualizar el texto del marcador
+                    UpdateScoreText();
                 }
                 else
                 {
@@ -107,26 +114,21 @@ public class MathQuiz : MonoBehaviour
                 // Generar nueva pregunta
                 GenerateNewQuestion();
             }
-          
-            
-            
         }
+    }
+
+    private void UpdateScoreText()
+    {
+        scoreText.text = "Punts: " + DatosGlobales.puntos;
     }
 
     private IEnumerator TrackGameTime()
     {
+        // Esperar un minuto (60 segundos)
+        yield return new WaitForSeconds(180f);
 
-       
-        {
-            // Esperar un minuto (60 segundos)
-            yield return new WaitForSeconds(180f);
-
-            // Cargar la escena de victoria
-            Debug.Log("¡Se ha alcanzado 1 minuto de juego! Cargando la escena de victoria...");
-            SceneManager.LoadScene("victory");
-        } 
-        
-        
-        
+        // Cargar la escena de victoria
+        Debug.Log("¡Se ha alcanzado 1 minuto de juego! Cargando la escena de victoria...");
+        SceneManager.LoadScene("victory");
     }
 }
