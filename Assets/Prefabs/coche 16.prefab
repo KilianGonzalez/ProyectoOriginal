@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 366d9c25a6b291348bb571da0a62fa91, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CarVel: 0.02
+  CarVel: 0.05
 --- !u!114 &5799354437440390482
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -185,3 +185,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb3d3c958d5f70b488a568938f28b45e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  vidas: 0
+  uiVidasJugador: {fileID: 0}
